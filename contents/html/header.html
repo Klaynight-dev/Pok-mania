@@ -1,0 +1,47 @@
+<header>
+    <nav>  
+        <div>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        
+        <div class="profil">
+            <img src="./contents/img/sacha.jpeg" alt="Avatar">
+            <p>Clem-562</p>
+            <a href="#" class="btn-create-account">Créer un compte</a>
+        </div>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">MA COLLECTION</a></li>
+            <li><a href="#">LES TYPES</a></li>
+            <li><a href="#">NOUVEAUTÉS</a></li>
+        </ul>
+    </nav>
+
+    <a href="./"><img src="contents/img/Design_sans_titre__1_-removebg-preview.png" alt="Logo"></a>
+    
+</header>
+<script>
+const menuButton = document.querySelector('nav div:first-of-type');
+const menu = document.querySelector('nav:nth-of-type(2)');
+const lines = document.querySelectorAll('.line');
+const logo = document.querySelector('header img[alt="Logo"]');
+
+menuButton.addEventListener('click', function() {
+    lines.forEach(line => line.classList.toggle('active'));
+    menu.classList.toggle('active');
+    if (menu.classList.contains('active')) {
+    menu.style.zIndex = '-1';
+    menu.addEventListener('transitionend', function() {
+        menu.style.zIndex = '0';
+    }, { once: true });
+    logo.style.transform = 'scale(1.2) translateY(20px)';
+    } else {
+    menu.style.zIndex = '';
+    logo.style.transform = 'scale(1)';
+    }
+});
+</script>
