@@ -10,9 +10,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script> 
-        /**$(function(){
+        $(function(){
           $("#footer").load("./contents/html/footer.html"); 
-        });*/
+        });
  
         $(function(){
           $("#nav").load("./contents/html/header.html"); 
@@ -22,83 +22,7 @@
 
     <body>
         <div id="nav"></div>
-        <footer id="footer"></footer> 
-        <footer>
-            <section>
-                 <article> 
-                    <h1> Contact </h1>
-                    <p> <img src="telephone.png" alt="tel"> <a href="#"></a>  06 87 45 26 07 </p>
-                    <p> <img src="mail.png" alt="mail"> <a href="#"></a>  pokémania@gmail.com </p>
-                    <p> <img src="position.png" alt="maison"> <a href="#"></a>  25 avenue des carapuces, 35137 Bourg Palette </p>
-                 </article>
-         
-                 <article> 
-                    <h1> Réseaux sociaux </h1>
-                    <p> <img src="../logo instagram.png" alt="insta"> <a href="#"></a>  Instagram </p>
-                    <p> <img src="logo facebook.png" alt="facebook"> <a href="#"></a>  Facebook </p>
-                    <p> <img src="logo youtube.png" alt="youtube"> <a href="#"></a>  Youtube </p>
-                    <p> <img src="logo twitter.png" alt="x"> <a href="#"></a>  X </p>
-                 </article>
-         
-                 <article> 
-                     <h1> Liens </h1>
-                     <p> <a href="#"></a> Accueil </p>
-                     <p> <a href="#"></a> Ma collection </p>
-                     <p> <a href="#"></a> Les différents types </p>
-                     <p> <a href="#"></a> Les nouveautés </p>
-                 </article>
-         
-                 <article> 
-                     <h1> Newsletter </h1>
-                     <input type="email" placeholder="Entrez votre mail" />
-                     <button>S'inscrire</button>
-                 </article>
-            </section>
-
-            <style>
-                footer section {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 20px;
-                    padding: 20px;
-                    text-align: left;
-                    color: var(--font-color);
-                }
-                footer section article {
-                    padding: 20px;
-                }
-                footer section h1 {
-                    font-size: 1.2em;
-                    margin-bottom: 10px;
-                }
-                footer section p {
-                    margin: 5px 0;
-                }
-                footer input {
-                    width: 93%;
-                    padding: 10px;
-                    margin-bottom: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                }
-                footer button {
-                    padding: 10px 20px;
-                    background-color: var(--third-color);
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    width: 100%;
-                }
-                footer button:hover {
-                    background-color: var(--secondary-color);
-                    color: var(--black-color);
-                }
-            </style>
-         
-            <aside>
-                <p> © 2025 Copyright Pokémania Company </p>
-            </aside>
-        </footer>
+        <div id="footer"></div>
     </body>
 </html>
 
