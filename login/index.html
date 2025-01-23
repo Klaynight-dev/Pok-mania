@@ -78,8 +78,8 @@
 
         if (isValid) {
             alert(`Bienvenue, ${username} ! Connexion réussie.`);
-            // Stocker le nom d'utilisateur dans le localStorage
-            localStorage.setItem('username', username);
+            // Stocker le nom d'utilisateur dans un cookie
+            document.cookie = `username=${username}; path=/;`;
             // Rediriger l'utilisateur vers la page d'accueil
             window.location.href = '../index.html';
         }

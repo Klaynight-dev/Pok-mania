@@ -91,4 +91,29 @@ main section:first-of-type article:nth-of-type(2) div:first-of-type img {
 main section:first-of-type article:nth-of-type(2) div:last-of-type img {
     top: -16.5em;
     right: -16em;
+
+}
+
+strong {
+    color: var(--third-color);
+    display: inline-block;
+    animation: colorAnimation 20s infinite;
+}
+
+@keyframes colorAnimation {
+    0%, 100% {
+        color: #FF5733;
+    }
+    20% {
+        color: #33FF57;
+    }
+    40% {
+        color: #3357FF;
+    }
+    60% {
+        color: #FF33A1;
+    }
+    80% {
+        color: #bcc123;
+    }
 }

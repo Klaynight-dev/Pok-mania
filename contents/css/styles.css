@@ -274,3 +274,6 @@ footer aside a:hover {
     }
 }
 
+strong {
+    font-weight: bold;
+}
