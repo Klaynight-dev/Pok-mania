@@ -7,9 +7,9 @@
         </div>
         
         <div class="profil">
-            <img src="./contents/img/sacha.jpeg" alt="Avatar">
+            <img src="https://klaynight.fr/Pokemania/contents/img/sacha.jpeg" alt="Avatar">
             <p>Clem-562</p>
-            <a href="#" class="btn-create-account">Créer un compte</a>
+            <a href="https://klaynight.fr/Pokemania/login" class="btn-create-account">Créer un compte</a>
         </div>
     </nav>
     <nav>
@@ -21,7 +21,7 @@
         </ul>
     </nav>
 
-    <a href="./"><img src="contents/img/Design_sans_titre__1_-removebg-preview.png" alt="Logo"></a>
+    <a href="./"><img src="https://klaynight.fr/Pokemania/contents/img/Design_sans_titre__1_-removebg-preview.png" alt="Logo"></a>
     
 </header>
 <script>
@@ -44,4 +44,33 @@ menuButton.addEventListener('click', function() {
     logo.style.transform = 'scale(1)';
     }
 });
+
+    const usernameElement = document.querySelector('.profil p');
+
+    // Récupérer le nom d'utilisateur depuis les cookies
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    const storedUsername = getCookie('username');
+    if (storedUsername) {
+        usernameElement.textContent = storedUsername;
+    }
+
+    menuButton.addEventListener('click', function() {
+        lines.forEach(line => line.classList.toggle('active'));
+        menu.classList.toggle('active');
+        if (menu.classList.contains('active')) {
+            menu.style.zIndex = '-1';
+            menu.addEventListener('transitionend', function() {
+                menu.style.zIndex = '0';
+            }, { once: true });
+            logo.style.transform = 'scale(1.2) translateY(20px)';
+        } else {
+            menu.style.zIndex = '';
+            logo.style.transform = 'scale(1)';
+        }
+    });
 </script>
