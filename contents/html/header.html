@@ -7,8 +7,8 @@
         </div>
         
         <div class="profil">
-            <img src="https://klaynight.fr/Pokemania/contents/img/sacha.jpeg" alt="Avatar">
-            <p>Clem-562</p>
+            <img class="username" src="https://klaynight.fr/Pokemania/contents/img/sacha.jpeg" alt="Avatar">
+            <p class="username"></p>
             <a href="https://klaynight.fr/Pokemania/login" class="btn-create-account">Créer un compte</a>
         </div>
     </nav>
@@ -34,43 +34,35 @@ menuButton.addEventListener('click', function() {
     lines.forEach(line => line.classList.toggle('active'));
     menu.classList.toggle('active');
     if (menu.classList.contains('active')) {
-    menu.style.zIndex = '-1';
-    menu.addEventListener('transitionend', function() {
-        menu.style.zIndex = '0';
-    }, { once: true });
-    logo.style.transform = 'scale(1.2) translateY(20px)';
+        menu.style.zIndex = '-1';
+        menu.addEventListener('transitionend', function() {
+            menu.style.zIndex = '0';
+        }, { once: true });
+        logo.style.transform = 'scale(1.2) translateY(20px)';
     } else {
-    menu.style.zIndex = '';
-    logo.style.transform = 'scale(1)';
+        menu.style.zIndex = '';
+        logo.style.transform = 'scale(1)';
     }
 });
 
-    const usernameElement = document.querySelector('.profil p');
+const usernameElement = document.querySelector('.profil .username');
+const createAccountButton = document.querySelector('.btn-create-account');
 
-    // Récupérer le nom d'utilisateur depuis les cookies
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
+// Function to get cookie value by name
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
 
-    const storedUsername = getCookie('username');
-    if (storedUsername) {
-        usernameElement.textContent = storedUsername;
-    }
-
-    menuButton.addEventListener('click', function() {
-        lines.forEach(line => line.classList.toggle('active'));
-        menu.classList.toggle('active');
-        if (menu.classList.contains('active')) {
-            menu.style.zIndex = '-1';
-            menu.addEventListener('transitionend', function() {
-                menu.style.zIndex = '0';
-            }, { once: true });
-            logo.style.transform = 'scale(1.2) translateY(20px)';
-        } else {
-            menu.style.zIndex = '';
-            logo.style.transform = 'scale(1)';
-        }
-    });
+// Check if the user is logged in
+const storedUsername = getCookie('username');
+if (storedUsername) {
+    usernameElement.textContent = storedUsername;
+    usernameElement.style.display = 'block';
+    createAccountButton.style.display = 'none';
+} else {
+    usernameElement.style.display = 'none';
+    createAccountButton.style.display = 'block';
+}
 </script>

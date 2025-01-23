@@ -150,6 +150,7 @@ nav:nth-of-type(2).active {
     display: flex;
     transform: translateY(80px);
     z-index: 0;
+    top: -20px;
 }
 
 nav:nth-of-type(2).active img {
@@ -272,8 +273,4 @@ footer aside a:hover {
     header nav:first-of-type .btn-create-account {
         display: none;
     }
-}
-
-strong {
-    font-weight: bold;
 }
