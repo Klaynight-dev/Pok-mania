@@ -1,0 +1,94 @@
+main section:first-of-type article:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section:first-of-type {
+    margin-top: -2em;
+    margin-bottom: 10em;
+}
+
+main section:first-of-type article:first-of-type h1 {
+    padding: 30px;
+    font-size: 2em;
+}
+
+main section:first-of-type article:nth-of-type(2) div {
+    background-color: var(--font-color);
+    border: 10px solid var(--black-color);
+    border-radius: 20px;
+    height: 300px;
+    max-width: 300px;
+}
+
+main section:first-of-type article:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    min-height: 20em;
+    width: 100%;
+}
+
+main section:first-of-type article:nth-of-type(2) div:first-of-type, main section:first-of-type article:nth-of-type(2) div:last-of-type {
+    align-self: end;
+    width: 400px;
+    padding: 10px;
+}
+
+main section:first-of-type article:nth-of-type(2) div:nth-of-type(2) {
+    align-self: start;
+    width: 400px;
+    margin: 3%;
+    padding: 10px;
+}
+
+main section:first-of-type article:nth-of-type(2) div h2  {
+    border-bottom: 2px solid var(--black-color);
+    text-align: center;
+    padding-bottom: 8px;
+    font-size: 2em;
+}
+main section:first-of-type article:nth-of-type(2) div p {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+
+main section:first-of-type article:nth-of-type(2) div a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    color: var(--font-color);
+    text-decoration: none;
+    background-color: var(--third-color);
+    font-weight: bold;
+    border-radius: 30px;
+    position: relative;
+    top: 0.8em;
+}
+
+main section:first-of-type article:nth-of-type(2) div a:hover {
+    background-color: var(--primary-color);
+    color: var(--black-color);
+}
+
+main section:first-of-type article:nth-of-type(2) div:last-of-type a {
+    top: -0.3em;
+}
+
+main section:first-of-type article:nth-of-type(2) div img {
+    max-height: 360px;
+    position: relative;
+}
+
+main section:first-of-type article:nth-of-type(2) div:first-of-type img {
+    top: -16.5em;
+    left: -9em;
+}
+
+main section:first-of-type article:nth-of-type(2) div:last-of-type img {
+    top: -16.5em;
+    right: -16em;
+}
